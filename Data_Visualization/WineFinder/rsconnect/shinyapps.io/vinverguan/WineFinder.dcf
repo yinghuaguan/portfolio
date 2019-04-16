@@ -1,0 +1,12 @@
+name: WineFinder
+title: WineFinder
+username:
+account: vinverguan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 258665
+bundleId: 1195118
+url: https://vinverguan.shinyapps.io/WineFinder/
+when: 1517007314.2251
+asMultiple: FALSE
+asStatic: FALSE
