@@ -1,0 +1,24 @@
+Package: yelpitout
+Title: yelpitout
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Linsey", "Yao", email = "yllz9610@gmail.com", role = c("aut", "cre")), 
+    person("Yinghua", "Guan", role = c("aut")),
+    person("Ruoqi", "Xu", role = c("aut")),
+    person("Ying", "Dong",role = c("aut"))
+    )
+Description: Our package intends to develop an R wrapper for the Yelp RESTful API.
+Depends: R (>= 3.4.2)
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: ggplot2,
+    httr,
+    magrittr,
+    dplyr,
+    ggmap
+Suggests: testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 6.0.1
