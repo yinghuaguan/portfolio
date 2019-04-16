@@ -1,0 +1,80 @@
+---
+title: "BlackBoxR"
+author: "Siddharth Arora, Yinghua Guan, Abishek Murali"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{BlackBoxR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction
+
+>The Bayesian vs Frequentist approach is more of a philosophical debate which this package will not delve into. This package attempts at breaking down the understanding and the underlying assumptions of the 2 approaches and how they compare. The package will run a significance analysis using both approaches based on data provided by the user, compare credible and confidence intervals and finally debunks the understanding of MAP and MLE for parameter estimation.
+>
+>This package is aimed at users who are attempting to familiarize themselves with the Bayesian/Frequentist approach(although I'm guessing it will be more Bayesian). This package can elucidate the difference in approaches and will attempt to help the user get a basic high-level understanding of both approaches and how they should proceed to carry out further analysis.
+
+
+## Functions Included
+
+```
+getCredibleInterval() : Perform Monte-Carlo estimation to obtain credible intervals
+
+getConfidenceInterval() : Obtain confidence interval for the result
+
+performABTest() : Run A\B test using the Frequentist approach
+
+getMLE(): Get maximum likelihood value of the parameter for a given distribution.
+
+Work in Progress
+
+performABtest_Bayesian() : Run A\B test using the Bayesian approach
+
+getMAP(): Get Maximum a Priori estimate for the parameters for a given distribution.
+
+
+```
+
+## Example Usage
+
+
+```
+getMLE(distribution,column)
+
+*Purpose*: compute the log likelihood of data given the distribution
+
+*Args*:
+
+distribution: type of distribution of the data. for example (bernoulli, poisson). Support for 2 as of now.
+
+column: the column is a vector of numeric data over which we perform the maximum likelihood
+
+*Return*:
+
+the log likelihood of the data.For example, mean for poisson, probability for bernoulli
+
+```
+```
+performABTest(data,alpha = 0.05)
+
+*Purpose*: Performs A/B testing based on the data. Uses Fisher's exact test or Chi-square based on the size of the data
+
+*Args*:
+
+data - input dataframe consisting of A and B events and occurance of events
+
+alpha - false positive rate
+
+*Returns*
+
+p-value indicating significance
+Graph displaying the change in p-values over trials
+Method used to compute p-value
+```
+
+
+Also a quote using `>`:
+
+> "He who gives up [code] safety for [code] speed deserves neither."
+([via](https://twitter.com/hadleywickham/status/504368538874703872))

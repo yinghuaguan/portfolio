@@ -1,0 +1,27 @@
+---
+title: "get 95% credible interval (Bayesian Approach)"
+author: "Vinver Guan"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This function aims to get 95% credible interval, which is used bayesian approach to analyze your data. We just handle normal distribution for prior distribution, also , we assume your input data follows normal distribution. 
+  
+Below is an example:
+
+```
+sample<-rnorm(5,mean=3,sd=0.9)
+getCredibleInterval(sample,c(4,1),c(3,0.9))
+```
+
